@@ -7,8 +7,8 @@ on:
 
 jobs:
   terraform:
-    env: 
-    TF_TOKEN_app_terraform_io: PwstE3ne6VYtow.atlasv1.Kizb6rU6TjWbzTnB3GN01RCx4YUQWy1CKHKVXIyOpA7ynrsLCPzPSkQriGCfM7x80cE
+    env:
+     TF_TOKEN_app_terraform_io: PwstE3ne6VYtow.atlasv1.Kizb6rU6TjWbzTnB3GN01RCx4YUQWy1CKHKVXIyOpA7ynrsLCPzPSkQriGCfM7x80cE
     runs-on: ubuntu-latest
 
     steps:
