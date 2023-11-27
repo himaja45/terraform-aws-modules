@@ -9,7 +9,7 @@ jobs:
   terraform:
     env:
       TF_CLI_CONFIG_FILE: /tmp/terraform.rc
-      TF_TOKEN_app_terraform_io: npSE15J3xo6HAQ.atlasv1.4Q2lWcqwzXat7zqKrzA8qQzNk66HfWC24Kyiw0OV9kOhOBB2S9nfKgjsnTrSmmuGAzg
+      TF_TOKEN_app_terraform_io: ${{ secrets.TF_TOKEN_app_terraform_io }}
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +22,7 @@ jobs:
         terraform_version: 1.6.4
 
     - name: Create CLI Config
-      run: echo "credentials \"app.terraform.io\" { token = \"npSE15J3xo6HAQ.atlasv1.4Q2lWcqwzXat7zqKrzA8qQzNk66HfWC24Kyiw0OV9kOhOBB2S9nfKgjsnTrSmmuGAzg\" }" > $TF_CLI_CONFIG_FILE
+      run: echo "credentials \"app.terraform.io\" { token = \"$TF_TOKEN_app_terraform_io\" }" > $TF_CLI_CONFIG_FILE
 
     - name: Terraform Init
       run: terraform init
