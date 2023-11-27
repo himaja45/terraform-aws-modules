@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: current working directory
-      working-directory: ./simple
-      
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -23,10 +20,13 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
+      working-directory: ./simple
 
     - name: Terraform Plan
       run: terraform plan
+      working-directory: ./simple
 
     - name: Terraform Apply
       if: github.event_name == 'push' && github.ref = 'refs/heads/main'
       run: terraform apply -auto-approve
+      working-directory: ./simple
