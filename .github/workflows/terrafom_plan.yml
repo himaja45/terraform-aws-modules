@@ -9,7 +9,7 @@ jobs:
   terraform:
     env:
       TF_CLI_CONFIG_FILE: /tmp/terraform.rc
-      TF_TOKEN_app_terraform_io: PwstE3ne6VYtow.atlasv1.Kizb6rU6TjWbzTnB3GN01RCx4YUQWy1CKHKVXIyOpA7ynrsLCPzPSkQriGCfM7x80cE
+      TF_TOKEN_app_terraform_io: lVuPeyFzB2gxLw.atlasv1.tq0XyE6ckkkzNTNluyJ0HH9EEklazhpsjCfBttvyw0NLIo0fAqVG5pHyyzImPHCqbL8
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +22,7 @@ jobs:
         terraform_version: 1.6.4
 
     - name: Create CLI Config
-      run: echo "credentials \"app.terraform.io\" { token = \"PwstE3ne6VYtow.atlasv1.Kizb6rU6TjWbzTnB3GN01RCx4YUQWy1CKHKVXIyOpA7ynrsLCPzPSkQriGCfM7x80cE\" }" > $TF_CLI_CONFIG_FILE
+      run: echo "credentials \"app.terraform.io\" { token = \"lVuPeyFzB2gxLw.atlasv1.tq0XyE6ckkkzNTNluyJ0HH9EEklazhpsjCfBttvyw0NLIo0fAqVG5pHyyzImPHCqbL8\" }" > $TF_CLI_CONFIG_FILE
 
     - name: Terraform Init
       run: terraform init
