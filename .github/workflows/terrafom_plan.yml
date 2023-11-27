@@ -16,8 +16,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v1
+      uses: hashicorp/setup-terraform@v3
       with:
+        cli_config_credentials_token: "EELQnxJA7Cp3EA.atlasv1.Do5UDRmZwmk2Ei7z4ONVFmcb2rKvJrWcIN5jYyfL7bx8QOwXPPtwqXxoOqfA0ASgJwU"
         terraform_version: 1.6.4
 
     - name: Terraform Init
