@@ -8,7 +8,8 @@ on:
 jobs:
   terraform:
     env:
-      TF_TOKEN_app_terraform_io: "EELQnxJA7Cp3EA.atlasv1.Do5UDRmZwmk2Ei7z4ONVFmcb2rKvJrWcIN5jYyfL7bx8QOwXPPtwqXxoOqfA0ASgJwU"
+      TF_CLI_CONFIG_FILE: /tmp/terraform.rc
+      TF_TOKEN_app_terraform_io: PwstE3ne6VYtow.atlasv1.Kizb6rU6TjWbzTnB3GN01RCx4YUQWy1CKHKVXIyOpA7ynrsLCPzPSkQriGCfM7x80cE
     runs-on: ubuntu-latest
 
     steps:
@@ -16,10 +17,12 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v3
+      uses: hashicorp/setup-terraform@v1
       with:
-        cli_config_credentials_token: "EELQnxJA7Cp3EA.atlasv1.Do5UDRmZwmk2Ei7z4ONVFmcb2rKvJrWcIN5jYyfL7bx8QOwXPPtwqXxoOqfA0ASgJwU"
         terraform_version: 1.6.4
+
+    - name: Create CLI Config
+      run: echo "credentials \"app.terraform.io\" { token = \"PwstE3ne6VYtow.atlasv1.Kizb6rU6TjWbzTnB3GN01RCx4YUQWy1CKHKVXIyOpA7ynrsLCPzPSkQriGCfM7x80cE\" }" > $TF_CLI_CONFIG_FILE
 
     - name: Terraform Init
       run: terraform init
