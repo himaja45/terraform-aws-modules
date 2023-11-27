@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: current working directory
+      working-directory: ./simple
+      
     - name: Checkout code
       uses: actions/checkout@v2
 
