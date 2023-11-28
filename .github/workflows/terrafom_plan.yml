@@ -10,6 +10,8 @@ jobs:
     env:
       TF_CLI_CONFIG_FILE: /tmp/terraform.rc
       TF_TOKEN_app_terraform_io: ${{ secrets.TF_TOKEN_app_terraform_io }}
+      AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+      AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
     runs-on: ubuntu-latest
 
     steps:
