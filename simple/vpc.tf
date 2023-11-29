@@ -16,6 +16,7 @@ terraform {
   required_providers {
     hashicorp/vpc = {
       source = "hashicorp/vpc"
+       version = ">= 1.6.0"
     }
   }
 }
