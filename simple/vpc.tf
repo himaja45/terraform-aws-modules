@@ -14,7 +14,7 @@ module "servers" {
 
 terraform {
   required_providers {
-    hashicorp/vpc = {
+    hashicorp = {
       source  = "hashicorp"
       version = ">= 1.0.0"
     }
