@@ -3,7 +3,7 @@ provider "vpc" {
 }
 
 module "servers" {
-  source = "./https://github.com/himaja45/terra_demo"
+  source = "./main.tf"
   ami = "ami-0230bd60aa48260c6"
   instance_type = "t2.micro"
   key_name = "terraform_modules"
