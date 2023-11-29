@@ -9,5 +9,17 @@ resource "aws_instance" "example" {
   key_name      = "terra_demo"
   tags = {
     Name = "example-instance"
+    GithubRepo = "terraform-aws-vpc"
+  }
+}
+
+terraform {
+  required_version = ">= 1.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.0"
+    }
   }
 }
