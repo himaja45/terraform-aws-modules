@@ -11,3 +11,11 @@ module "servers" {
     name = "modules-example"
   }
 }
+
+terraform {
+  required_providers {
+    hashicorp/vpc = {
+      source = "hashicorp/vpc"
+    }
+  }
+}
