@@ -15,7 +15,7 @@ module "servers" {
 terraform {
   required_version = ">=1.6.0"
     required_providers {
-      aws = {
+      vpc = {
        source  = "hashicorp/vpc"
         version = ">= 4.5.0"
     }
