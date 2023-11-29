@@ -12,11 +12,6 @@ module "servers" {
   }
 }
 
-terraform {
-  required_providers {
-    hashicorp = {
-      source  = "hashicorp/vpc"
-      version = ">= 2.0.0"
-    }
-  }
+provider "github" {
+  token = "var.TF_TOKEN_APP_TERRAFORM_IO"
 }
