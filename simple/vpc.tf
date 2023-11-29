@@ -21,7 +21,7 @@ terraform {
   }
 }
 
-provider "hashicorp/vpc" {
+provider "hashicorp" {
   region = "us-east-1"
   custom_variable = true
 }
