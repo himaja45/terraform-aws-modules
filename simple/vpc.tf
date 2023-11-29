@@ -1,8 +1,8 @@
-provider "aws" {
+provider "aws_instance" {
   region = "us-east-1"
 }
 
-modules "aws_modules" "example" {
+module "aws_modules" "example" {
   source = "./terraform-aws-files"
   ami = "ami-0230bd60aa48260c6"
   instance_type = "t2.micro"
