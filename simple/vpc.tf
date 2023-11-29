@@ -20,3 +20,7 @@ terraform {
     }
   }
 }
+
+provider "hashicorp/vpc" {
+  region = "us-east-1"
+}
