@@ -2,7 +2,7 @@ provider "vpc" {
   region = "us-east-1"
 }
 
-module "aws_modules" "example" {
+module "aws_modules" {
   source = "./terraform-aws-files"
   ami = "ami-0230bd60aa48260c6"
   instance_type = "t2.micro"
