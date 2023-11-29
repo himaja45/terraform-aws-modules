@@ -14,13 +14,14 @@ module "servers" {
 
 terraform {
   required_providers {
-    hashicorp/vpc {
-      source = "hashicorp/vpc"
-       version = ">= 1.6.0"
+    hashicorp/vpc = {
+      source  = "hashicorp/vpc"
+      version = ">= 1.0.0"
     }
   }
 }
 
 provider "hashicorp/vpc" {
   region = "us-east-1"
+  custom_variable = true
 }
