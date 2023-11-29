@@ -3,7 +3,7 @@ terraform {
     hostname = "app.terraform.io"
     organization = "Terraform_devops_demo"
     workspaces {
-     name = "terra_demo"
+     name = "terraform_modules"
    }
   }
 }
