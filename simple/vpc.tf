@@ -1,4 +1,4 @@
-provider "aws_instance" {
+provider "vpc" {
   region = "us-east-1"
 }
 
