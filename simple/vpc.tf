@@ -11,18 +11,3 @@ module "servers" {
     name = "modules-example"
   }
 }
-
-terraform {
-  required_providers {
-    hashicorp = {
-      source  = "hashicorp"
-      version = "<= 2.0.0"
-    }
-  }
-}
-
-provider "hashicorp"{
-  region = "us-east-1"
-  version = "<=2.0.0"
-  custom_variable = true
-}
