@@ -27,7 +27,7 @@ variable "private_app_subnet_az1_cidr" {
 }
 variable "private_app_subnet_az2_cidr" {
     type =  string
-     description = "value of private subnet"
+    description = "value of private subnet"
 }
 variable "private_app_subnet_az3_cidr" {
     type = string
