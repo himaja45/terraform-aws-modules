@@ -7,6 +7,7 @@ variable "region" {
 variable "project_name" {
     type = string
     description = "terraform modules"
+    default = "vpc_archiitecture"
 }
 variable "environment" {}
 
