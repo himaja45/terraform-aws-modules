@@ -32,7 +32,7 @@ variable "private_app_subnet_az2_cidr" {
 }
 variable "private_app_subnet_az3_cidr" {
     type = string
-    desription = "value of private subnet"
+    description = "value of private subnet"
 }
 variable "private_data_subnet_az1_cidr" {
     type = string
