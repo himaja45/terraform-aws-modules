@@ -16,7 +16,7 @@ terraform {
   required_version = ">= 1.6.4"
 
   required_providers {
-    aws = {
+    vpc = {
       source  = "hashicorp/vpc"
       version = ">= 5.0"
     }
