@@ -12,14 +12,3 @@ resource "aws_instance" "example" {
     GithubRepo = "terraform-aws-vpc"
   }
 }
-
-terraform {
-  required_version = ">= 1.0"
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = ">= 5.0"
-    }
-  }
-}
