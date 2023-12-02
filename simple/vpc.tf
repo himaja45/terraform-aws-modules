@@ -8,9 +8,6 @@ module "servers" {
   providers = {
     aws = aws.config_vpc
   }
-  tags = {
-    name = "modules-example"
-  }
 }
 
 terraform {
