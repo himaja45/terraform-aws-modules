@@ -1,13 +1,5 @@
-provider "aws" {
-  alias = "config_vpc"
-  region = "us-east-1"
-}
-
 module "servers" {
   source = "./.."
-  providers = {
-    aws = aws.config_vpc
-  }
 }
 
 terraform {
