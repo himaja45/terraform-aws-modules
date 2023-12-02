@@ -16,10 +16,10 @@ terraform {
   required_version = "<=1.6.5"
 
   required_providers {
-    vpc = {
+    aws = {
       source  = "hashicorp/aws"
       version = "2.70.0"
-      configuration_aliases = [vpc.alternates]
+      configuration_aliases = [aws.alternates]
     }
   }
 }
