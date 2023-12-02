@@ -3,14 +3,20 @@ module "servers" {
   ami = "ami-0230bd60aa48260c6"
   instance_type = "t2.micro"
   key_name = "terraform_modules"
-  var.vpc_cidr = "10.0.0.0/16"
-  var.public_subnet_az1_cidr = "10.0.101.0/24"
-  var.private_app_subnet_az1_cidr = "10.0.1.0/24"
-  var.private_app_subnet_az2_cidr = "10.0.2.0/24"
-  var.private_app_subnet_az3_cidr = "10.0.3.0/24"
-  var.private_data_subnet_az1_cidr = "10.0.21.0/24"
-  var.private_data_subnet_az2_cidr = "10.0.22.0/24"
-  var.private_data_subnet_az3_cidr = "10.0.23.0/24"
+  vpc_id = aws_vpc.vpc.id
+  cidr_block           = var.vpc_cidr
+  aws_internet_gateway = aws_internet_gateway.internet_gateway
+  public_subnet_az1_id = aws_subnet.public_subnet_az1.id
+  private_app_subnet_az1_id = aws_subnet.private_app_subnet_az1.id
+  private_app_subnet_az2_id = aws_subnet.private_app_subnet_az2.id
+  private_app_subnet_az3_id = aws_subnet.private_app_subnet_az3.id
+  private_data_subnet_az1_id = aws_subnet.private_data_subnet_az1.id
+  private_data_subnet_az2_id = aws_subnet.private_data_subnet_az2.id
+  private_data_subnet_az3_id = aws_subnet.private_data_subnet_az3.id
+  availability_zone_1 = data.aws_availability_zones.available_zones.names[0]
+  availability_zone_2 = data.aws_availability_zones.available_zones.names[1]
+  availability_zone_3 = data.aws_availability_zones.available_zones.names[2]
+
 }
 
 terraform {
