@@ -1,5 +1,4 @@
 provider "aws" {
-  alias = "vpc_config"
   region = "us-east-1"
 }
 
