@@ -1,4 +1,4 @@
-provider "vpc" {
+provider "aws" {
   region = "us-east-1"
 }
 
@@ -13,7 +13,7 @@ module "servers" {
 }
 
 terraform {
-  required_version = "1.6.4"
+  required_version = "<=1.6.5"
 
   required_providers {
     aws = {
