@@ -13,10 +13,6 @@ module "servers" {
   private_data_subnet_az1_id = aws_subnet.private_data_subnet_az1.id
   private_data_subnet_az2_id = aws_subnet.private_data_subnet_az2.id
   private_data_subnet_az3_id = aws_subnet.private_data_subnet_az3.id
-  availability_zone_1 = data.aws_availability_zones.available_zones.names[0]
-  availability_zone_2 = data.aws_availability_zones.available_zones.names[1]
-  availability_zone_3 = data.aws_availability_zones.available_zones.names[2]
-
 }
 
 terraform {
