@@ -6,13 +6,13 @@ module "servers" {
   vpc_id = aws_vpc.vpc.id
   cidr_block           = var.vpc_cidr
   aws_internet_gateway = aws_internet_gateway.internet_gateway
-  public_subnet_az1_id = aws_subnet.public_subnet_az1.id
-  private_app_subnet_az1_id = aws_subnet.private_app_subnet_az1.id
-  private_app_subnet_az2_id = aws_subnet.private_app_subnet_az2.id
-  private_app_subnet_az3_id = aws_subnet.private_app_subnet_az3.id
-  private_data_subnet_az1_id = aws_subnet.private_data_subnet_az1.id
-  private_data_subnet_az2_id = aws_subnet.private_data_subnet_az2.id
-  private_data_subnet_az3_id = aws_subnet.private_data_subnet_az3.id
+  public_subnet_az1 = aws_subnet.public_subnet_az1.id
+  private_app_subnet_az1 = aws_subnet.private_app_subnet_az1.id
+  private_app_subnet_az2 = aws_subnet.private_app_subnet_az2.id
+  private_app_subnet_az3 = aws_subnet.private_app_subnet_az3.id
+  private_data_subnet_az1 = aws_subnet.private_data_subnet_az1.id
+  private_data_subnet_az2 = aws_subnet.private_data_subnet_az2.id
+  private_data_subnet_az3 = aws_subnet.private_data_subnet_az3.id
 }
 
 terraform {
