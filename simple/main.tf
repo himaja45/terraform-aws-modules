@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "us-east-1" 
+  region = "us-east-1"
 }
 
 
@@ -8,7 +8,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
   key_name      = "terra_demo"
   tags = {
-    Name = "example-instance"
+    Name       = "example-instance"
     GithubRepo = "terraform-aws-vpc"
   }
 }

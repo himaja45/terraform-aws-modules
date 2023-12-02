@@ -1,9 +1,9 @@
 terraform {
   backend "remote" {
-    hostname = "app.terraform.io"
+    hostname     = "app.terraform.io"
     organization = "Terraform_devops_demo"
     workspaces {
-     name = "terraform_modules"
-   }
+      name = "terraform_modules"
+    }
   }
 }

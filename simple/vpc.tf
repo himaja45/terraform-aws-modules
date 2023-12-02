@@ -1,5 +1,8 @@
 module "servers" {
   source = "./.."
+  ami = "ami-0230bd60aa48260c6"
+  instance_type = "t2.micro"
+  key_name = "terraform_modules"
   var.vpc_cidr = "10.0.0.0/16"
   var.public_subnet_az1_cidr = "10.0.101.0/24"
   var.private_app_subnet_az1_cidr = "10.0.1.0/24"
