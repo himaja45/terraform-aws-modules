@@ -1,5 +1,13 @@
 module "servers" {
   source = "./.."
+  var.vpc_cidr
+  var.public_subnet_az1_cidr
+  var.private_app_subnet_az1_cidr
+  var.private_app_subnet_az2_cidr
+  var.private_app_subnet_az3_cidr
+  var.private_data_subnet_az1_cidr
+  var.private_data_subnet_az2_cidr
+  var.private_data_subnet_az3_cidr
 }
 
 terraform {
